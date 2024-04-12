@@ -1,0 +1,56 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.modal {
+  background-color: pink;
+  justify-content: center;
+}
+
+.close button {
+  position: relative;
+  align-self: top right;
+}
+
+.swim-lanes {
+  min-height: 60vh;
+}
+
+/* #todo-cards div,
+#in-progress-cards div,
+#done-cards div {
+  display: flex;
+  max-height: 80%;
+  justify-content: space-around;
+  margin-bottom: 0;
+  background-color: aliceblue;
+} */
+
+.task-card {
+  margin: 2px 1px 2px 1px;
+  border: 2px solid hotpink;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  z-index: 10;
+}
+
+.task-card:hover {
+  cursor: grab;
+}
+
+#draggable {
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px 10px 10px 0;
+}
+
+#droppable {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+}
