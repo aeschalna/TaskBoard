@@ -1,139 +1,28 @@
 # TaskBoard
-Use starter code to create a functional site for organizing tasks
+Description: create an interactive kanban board for task organization and project management 
 
-Starter Code:
+User Story
+AS A project team member with multiple tasks to organize
+I WANT a task board 
+SO THAT I can add individual project tasks, manage their state of progress and track overall project progress accordingly
 
-HTML
-<!DOCTYPE html>
-<html lang="en">
+ACCEPTANCE CRITERIA
+GIVEN a task board to manage a project
+WHEN I open the task board
+THEN the list of project tasks is displayed in columns representing the task progress state (Not Yet Started, In Progress, Completed)
+WHEN I view the task board for the project
+THEN each task is color coded to indicate whether it is nearing the deadline (yellow) or is overdue (red)
+WHEN I click on the button to define a new task
+THEN I can enter the title, description and deadline date for the new task into a modal dialog
+WHEN I click the save button for that task
+THEN the properties for that task are saved in localStorage
+WHEN I drag a task to a different progress column
+THEN the task's progress state is updated accordingly and will stay in the new column after refreshing
+WHEN I click the delete button for a task
+THEN the task is removed from the task board and will not be added back after refreshing
+WHEN I refresh the page
+THEN the saved tasks persist
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+Starter code sourced from: https://github.com/coding-boot-camp/musical-happiness
 
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Task Board</title>
-</head>
-
-<body>
-  <header class="p-4 mb-4 text-center border-bottom border-5">
-    <h1 class="display-3">Task Board</h1>
-    <p class="lead">A simple Kanban board for task management</p>
-  </header>
-  <div class="container">
-    <div class="text-center mb-5">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
-    </div>
-    <!-- Todo: Create a modal with a form to add tasks -->
-    <div class="row swim-lanes text-center justify-content-between">
-      <div class="col-12 col-lg-4 d-flex">
-        <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
-          <div class="card-header bg-white">
-            <h2 class="card-title mb-1">To Do</h2>
-          </div>
-          <div class="card-body bg-light">
-            <div id="todo-cards"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4 d-flex">
-        <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
-          <div class="card-header bg-white">
-            <h2 class="card-title mb-1">In Progress</h2>
-          </div>
-          <div class="card-body bg-light">
-            <div id="in-progress-cards"></div>
-          </div>
-        </div>
-        </div>
-        <div class="col-12 col-lg-4 d-flex">
-          <div id="done" class="card border-light mb-3 lane flex-grow-1">
-            <div class="card-header bg-white">
-              <h2 class="card-title mb-1">Done</h2>
-            </div>
-            <div class="card-body bg-light">
-              <div id="done-cards"></div>
-          </div>
-          </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
-  <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
-
-CSS
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-}
-
-.swim-lanes {
-  min-height: 60vh;
-}
-
-.task-card {
-  margin: 0 auto;
-}
-
-.task-card:hover {
-  cursor: grab;
-}
-
-Javascript
-
-// Retrieve tasks and nextId from localStorage
-let taskList = JSON.parse(localStorage.getItem("tasks"));
-let nextId = JSON.parse(localStorage.getItem("nextId"));
-
-// Todo: create a function to generate a unique task id
-function generateTaskId() {
-
-}
-
-// Todo: create a function to create a task card
-function createTaskCard(task) {
-
-}
-
-// Todo: create a function to render the task list and make cards draggable
-function renderTaskList() {
-
-}
-
-// Todo: create a function to handle adding a new task
-function handleAddTask(event){
-
-}
-
-// Todo: create a function to handle deleting a task
-function handleDeleteTask(event){
-
-}
-
-// Todo: create a function to handle dropping a task into a new status lane
-function handleDrop(event, ui) {
-
-}
-
-// Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
-$(document).ready(function () {
-
-});
+Link to deployed application: https://aeschalna.github.io/TaskBoard/
