@@ -15,3 +15,9 @@ Remaining code completed by Annie Schalnat @ https://github.com/fairybones
 
 ## Link to Deployed Application
  https://fairybones.github.io/TaskBoard/
+
+## Screenshots
+<img width="1553" alt="image with task list rendered" src="https://github.com/fairybones/TaskBoard/assets/161776685/2d443d68-228b-4064-b7b8-b48afbe5e25e">
+
+<img width="1553" alt="draggable & droppable" src="https://github.com/fairybones/TaskBoard/assets/161776685/d6cc4693-94fe-4ec7-9f68-968388f4dfea">
+
