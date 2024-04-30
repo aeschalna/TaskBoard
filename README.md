@@ -10,8 +10,8 @@ This simple Kanban board allows users to input new task data, stored as a task c
 No install necessary, simply open the index.html file in your browser to use the Kanban board.
 
 ## Credits
-Starter Code: https://github.com/coding-boot-camp/musical-happiness
-Remaining code completed by Annie Schalnat, https://github.com/fairybones
+Starter Code: https://github.com/coding-boot-camp/musical-happiness <br>
+Remaining code completed by Annie Schalnat @ https://github.com/fairybones
 
 ## Link to Deployed Application
-
+ https://fairybones.github.io/TaskBoard/
