@@ -97,21 +97,33 @@ function createTaskCard(task) {
 
     const taskCard = $("<article>");
     taskCard.attr('class', 'task-card');
+
+    // create delete 'x' btn per card
+    const deleteButton = $("<button>");
+    deleteButton.attr('class', 'delete-task');
+    deleteButton.text("x");
+
+
+    // event listener for the delete button
+    deleteButton.on('click', function () {
+        taskCard.remove();
+    });
+
+    // organize content into card sections
     const taskName = $("<header>");
     const taskDescription = $("<body>");
     const deadline = $("<footer>");
-    // const status = ;
 
     taskName.text(task.name);
     taskDescription.text(task.description);
     deadline.text(task.deadline);
 
-    taskCard.append(taskName, taskDescription, deadline);
+    taskCard.append(deleteButton, taskName, taskDescription, deadline);
 
     return taskCard;
 }
 
-// Todo: create a function to handle dropping a task into a new status lane
+// function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
     const droppedCard = ui.draggable;
     const droppedCardId = droppedCard.attr('id');
@@ -130,30 +142,11 @@ function handleDrop(event, ui) {
     }
 }
 
-// Todo: create a function to handle deleting a task
-function handleDeleteTask(event) {
-    const taskCard = $(this).closest('.task-card');
-    const taskId = taskCard.attr('id');
-    const taskLane = taskCard.closest('.lane').attr('id');
-
-    // Remove task card from UI
-    taskCard.remove();
-
-    // Remove task from localStorage
-    removeTaskFromLocalStorage(taskId);
-
-    // Update task status lane
-    if (taskLane === 'to-do' || taskLane === 'in-progress' || taskLane === 'done') {
-        updateTaskStatus(taskId, taskLane);
-    }
-}
-
 // When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
     // Set up event handlers - these don't run (yet)
     escapeModal.on('click', closeModal);
     saveButton.on('click', handleAddTask);
-    deleteButton.on('click', handleDeleteTask);
 
     // Use parens to run now(on page load)
     renderTaskList();
